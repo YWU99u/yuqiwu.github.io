@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #f5f3f0;
   --bg-2: #ece7e2;
   --ink: #2b2a28;
@@ -342,3 +342,4 @@ main {
     gap: 6px;
   }
 }
+
