@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邬宇奇 - Curriculum Vitae</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', 'Noto Serif SC', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.45;
+        }
+
+        .a4-page {
+            max-width: 210mm;
+            margin: 40px auto;
+            background: white;
+            padding: 40px 45px; /* 稍微减小页边距以容纳更多内容 */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            min-height: 297mm;
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* 改为顶部对齐 */
+        }
+
+        .name {
+            font-size: 26px;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: 0.5px;
+        }
+
+        .title {
+            font-size: 14px;
+            color: #4b5563;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* New Contact Layout (Horizontal) */
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 25px; /* 行间距15px，列间距25px */
+            margin-top: 12px;
+            font-size: 12.5px;
+            color: #374151;
+        }
+
+        .contact-row span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-row i {
+            color: #0f172a;
+            margin-right: 6px;
+            font-size: 13px;
+        }
+
+        /* Photo Box Style */
+        .photo-box {
+            width: 102px; /* 约等于二寸照片宽度 */
+            height: 136px;
+            border: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Section Headers */
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0f172a;
+            text-transform: uppercase;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 3px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 8px;
+            font-size: 13px;
+        }
+
+        /* Entries */
+        .entry {
+            margin-bottom: 15px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 14px;
+            color: #111827;
+        }
+
+        .entry-subtitle {
+            font-weight: 600;
+            font-size: 13px;
+            color: #4b5563;
+            font-style: italic;
+        }
+
+        .entry-date, .entry-location {
+            font-size: 12px;
+            color: #6b7280;
+            font-weight: 500;
+            text-align: right;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 3px;
+            font-size: 12.5px; /* 字体稍微调小以适应高密度信息 */
+            color: #374151;
+            text-align: justify;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0f172a;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 14px;
+            top: 3px;
+        }
+
+        /* Highlight keywords */
+        strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+            margin-right: 4px;
+        }
+
+        .pub-item {
+            font-size: 12.5px;
+            margin-bottom: 6px;
+            padding-left: 0;
+            text-indent: -1.5em;
+            margin-left: 1.5em;
+            color: #374151;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-cols: 110px 1fr;
+            gap: 10px;
+            font-size: 12.5px;
+            margin-bottom: 4px;
+        }
+        
+        .skills-label {
+            font-weight: 700;
+            color: #374151;
+        }
+
+        @media print {
+            body { background: white; }
+            .a4-page { margin: 0; box-shadow: none; width: 100%; max-width: 100%; padding: 30px 40px; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="a4-page">
+        <!-- Header -->
+        <header class="header">
+            <div style="flex: 1; margin-right: 30px;">
+                <h1 class="name">邬宇奇 <span style="font-size: 16px; font-weight: 400; color: #64748b;">(Yuqi Wu, Ph.D.)</span></h1>
+                <div class="title">人工智能科学家 | OPC创业者 | 奇灵智愈创始人 & CEO </div>
+                <div style="margin-top: 8px;">
+                    <span class="tag">复旦最年轻博士后</span>
+                    <span class="tag">UofA 满绩博士(1/49)</span>
+                    <span class="tag">"0-1"创业者</span>
+                    <span class="tag">11年北美经历</span>
+                    <span class="tag">情绪计算专家</span>
+                </div>
+                
+                <!-- 新的横向联系方式布局 -->
+                <div class="contact-row">
+                    <span><i class="fas fa-phone"></i> (+86) 186-7913-8857</span>
+                    <span><i class="fas fa-envelope"></i> ywu_bh@fudan.edu.cn</span>
+                    <span><i class="fas fa-globe"></i> <a href="https://ywu99u.github.io/" style="color:inherit; text-decoration:none; border-bottom:1px solid #ccc;">yuqiwu.github.io</a></span>
+                    <span><i class="fas fa-map-marker-alt"></i> 中国上海</span>
+                </div>
+            </div>
+            
+            <!-- 证件照区域 -->
+            <div class="photo-box">
+                <img src="images/ywu.png" alt="个人证件照">
+            </div>
+        </header>
+
+        <!-- Education -->
+        <section>
+            <div class="section-title"><i class="fas fa-graduation-cap"></i> 教育背景 (Education)</div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">复旦大学 (Fudan University)</div>
+                    <div class="entry-date">2025.08 – 至今</div>
+                </div>
+                <div class="entry-header">
+                    <div class="entry-subtitle">博士后研究员 | 生物医学工程</div>
+                    <div class="entry-location">上海, 中国</div>
+                </div>
+                <ul class="bullet-list">
+                    <li><strong>核心荣誉：</strong> 入选<strong>复旦大学超级博士后</strong>；获<strong>上海市超级博士后</strong>及<strong>上海市引才计划</strong>专项支持（复旦最年轻入选者之一）。</li>
+                    <li><strong>合作导师：</strong> 复旦大学生物医学工程与技术创新学院院长、加拿大工程院院士陈颉教授。</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">阿尔伯塔大学 (University of Alberta)</div>
+                    <div class="entry-date">2022.09 – 2025.06</div>
+                </div>
+                <div class="entry-header">
+                    <div class="entry-subtitle">哲学博士 (Ph.D.) | 电气工程（生物医学方向）</div>
+                    <div class="entry-location">埃德蒙顿, 加拿大</div>
+                </div>
+                <ul class="bullet-list">
+                    <li><strong>极速记录：</strong> 打破校史记录，成为<strong>全校最快完成硕博连读</strong>的毕业生（2年9个月完成博士学业）。</li>
+                    <li><strong>满绩点：</strong> 博士期间累计 <strong>GPA 4.0/4.0</strong> (Rank: 1/49)</li>
+                    <li><strong>学术产出：</strong> 博士期间累计发表 <strong>8+</strong> 高质量学术论文</li>
+                    <li><strong>合作导师：</strong> 复旦大学生物医学工程与技术创新学院院长、加拿大工程院院士陈颉教授。</li>
+                    <li><strong>奖项：</strong> 阿尔伯塔杰出博士生奖学金、国家公派留学奖学金 (CSC)、优秀毕业生奖提名。</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">阿尔伯塔大学 (University of Alberta)</div>
+                    <div class="entry-date">2017.09 – 2022.06</div>
+                </div>
+                <div class="entry-header">
+                    <div class="entry-subtitle">  理学学士 (BSc., Co-op) | 电子电气工程微纳制造专精 | 数学辅修 | 杰出荣誉</div>
+                    <div class="entry-location">埃德蒙顿, 加拿大</div>
+                </div>
+                <ul class="bullet-list">
+                    <li><strong>工作经验：</strong> 累计参与超过<strong>25个月</strong>人工智能工程师实习。</li>
+                    <li><strong>高绩点：</strong> 学士期间累计 <strong>GPA 3.8/4.0</strong> (Rank: 12/149)。</li>
+                    <li><strong>合作导师：</strong> 复旦大学生物医学工程与技术创新学院院长、加拿大工程院院士陈颉教授。</li>
+                    <li><strong>奖项：</strong> 院长科研奖、优秀本科生奖、连续 5 年院长荣誉名单。</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Entrepreneurial Experience (Expanded) -->
+        <section>
+            <div class="section-title"><i class="fas fa-rocket"></i> 创业经历 (Entrepreneurial Experience)</div>
+            
+           <div class="entry">
+    <div class="entry-header">
+        <div class="entry-title">上海奇灵智愈智能科技有限公司 (KeyLink AI)</div>
+        <div class="entry-date">2025.03 – 至今</div>
+    </div>
+    <div class="entry-header">
+        <div class="entry-subtitle">创始人 & 首席执行官 (Founder & CEO)</div>
+        <div class="entry-location">上海, 中国</div>
+    </div>
+    <ul class="bullet-list">
+        <li>
+            <strong>0 到 1 全链路搭建与团队组建：</strong> 
+            从零主导公司注册、资本结构设计和法律合规流程，搭建了跨学科15人核心团队（含AI算法、全栈开发、医学顾问和商务团队），应用OPC（One Person Company）模式实现初期高效决策，通过“小团队特种作战”指挥体系，将人效提升至行业平均的150%。具体包括：
+            <br>- <strong>团队架构：</strong> 亲自招聘并管理人工智能团队（如CTO赵盛铭博士）、医疗团队（如首席医学顾问张彦波教授），确保技术与临床资源无缝整合。
+            <br>- <strong>管理流程：</strong> 建立敏捷开发周期（每周迭代）和KPI考核体系，减少沟通成本30%。
+        </li>
+        <li>
+            <strong>技术研发与产学研深度转化：</strong> 
+            主导产学研技术落地，将实验室成果（如多模态情感计算、大模型推理）转化为63类精神疾病鉴别诊断系统。具体贡献包括：
+                <br>- <strong>临床转化：</strong> 与复旦大学附属中山医院等多家三甲医院合作，累计收集1000+小时临床访谈数据，诊断一致性Cohen's kappa超0.90（对标专家水平）。
+           
+        </li>
+        <li>
+            <strong>产品全周期设计与开发：</strong> 
+            亲自操刀产品Roadmap，构建“消费级物理陪伴+医疗级数字疗法”双矩阵，覆盖从硬件设计、软件开发到用户体验的全链路：
+            <br>- <strong>B端医疗产品：</strong> 设计“奇灵心”一站式精神健康服务平台，集成情绪体检舱、自动化他评量表等，已部署至长三角3家顶级医院进行临床研究合作，探索设备租赁+SaaS订阅模式（单医院年客单价超50万元）。
+           
+            <br>- <strong>C端消费产品：</strong> 孵化“奇灵造物”系列，主导定制化AI手办从概念到量产：基于用户照片、音频生成个性化数字分身，实现情绪陪伴功能。内测用户日增长85+，付费转化率40%，毛利率达60%。
+           
+        </li>
+        <li>
+            <strong>市场分析、销售与商业化闭环：</strong> 
+            通过双线战略破解心理健康市场痛点（孤独经济与医疗资源匮乏），实现B2B2C收入模型：
+            <br>- <strong>市场定位：</strong> 基于9500万抑郁症患者缺口分析，锁定“随叫随到”情绪载体需求，C端产品PMF调研显示86%客户意向（心理价位699-899元）。
+            <br>- <strong>销售成果：</strong> 签署出海订单（10,000+手办/30,000+AI毛绒玩具），金额千万级；国内与5+企业达成定制方案，B端单量超1000。
+            <br>- <strong>上下游整合：</strong> 管理供应链从芯片采购（自研AI芯片）到交付全流程，确保订单交付。
+        </li>
+        <li>
+            <strong>投融资与品牌建设：</strong> 
+            主导公司资本策略，累计参与50+场路演（包括奇绩创坛、复旦管院科创营等），关键里程碑包括：
+            <br>- <strong>融资成果：</strong> 完成种子轮众筹。
+            <br>- <strong>品牌影响力：</strong> 斩获2025全国高交会优秀成果奖，与KOL合作推广C端产品，转介绍率76%，提升品牌搜索指数300%。
+        </li>
+    </ul>
+</div>
+        </section>
+
+        <!-- Professional & Research Experience (Expanded) -->
+        <section>
+            <div class="section-title"><i class="fas fa-briefcase"></i> 工作与科研经历 (Professional & Research Experience)</div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">海外初创科技公司 / 实验室 (Various Startups & Labs)</div>
+                    <div class="entry-date">2017 – 2022</div>
+                </div>
+                <div class="entry-header">
+                    <div class="entry-subtitle">人工智能算法工程师 (MLE) / 研究助理</div>
+                    <div class="entry-location">加拿大</div>
+                </div>
+                <ul class="bullet-list">
+                    <li><strong>2+ 年海外实战经验：</strong> 在多家北美科技公司担任核心算法职位，积累了从算法设计到落地的全流程经验。</li>
+                    <li><strong>工业智能控制 (RL)：</strong> 主导开发了基于强化学习 (Reinforcement Learning) 的工业控制算法，成功应用于非线性混合三罐系统，实现了 PID 参数的自主实时调节。建立 DeltaV 分布式控制系统与算法端的 OPC 通讯连接，解决了工业现场数据实时交互的难题。</li>
+                    <li><strong>团队领导力：</strong> 曾带队参与 IEEE 全球医疗创业大赛，作为 Team Lead 协调技术与商业分工，最终斩获全球三等奖。</li>
+                </ul>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <div class="entry-title">情绪计算与大模型研究</div>
+                    <div class="entry-date">2022 – 至今</div>
+                </div>
+                <div class="entry-header">
+                    <div class="entry-subtitle">核心研究员</div>
+                </div>
+                <ul class="bullet-list">
+                    <li><strong>幻觉防御算法 (RASC & Derailer-Rerailer)：</strong> 针对医疗 AI “幻觉”的痛点，设计了自适应推理验证框架。模拟医生“审视-修正”的思维链，在 <strong>ACL / NAACL 2025</strong> 发表 2 篇顶会论文，显著提升了模型在复杂精神科病例中的逻辑忠实度。</li>
+                    <li><strong>临床数据生成 (CALLM)：</strong> 针对医疗数据隐私壁垒，提出基于 LLM 的数字孪生访谈生成技术（发表于 <strong>IEEE JBHI (IF: 6.8)</strong>）。该方案将高质量标注数据的获取成本<strong>降低了 99%</strong>，解决了行业数据孤岛问题。</li>
+                    <li><strong>临床可解释诊断模型：</strong> 针对医疗“黑盒”模型痛点，提出基于 LLM 的可解释、因果性分析模型（发表于 <strong>IEEE TAFFC (IF: 9.8)</strong>）。该方案为精神疾病诊断系统提供了可解释性支持，极大程度提升了诊断的准确性与可靠性。</li>
+                    <li><strong>智慧脑对话式诊断模型 (WiseMind)：</strong> 创新性打破传统分类式诊断范式，开创精神疾病领域基于 LLM 的对话式诊断技术（<strong>Nature npj Digital Medicine (IF: 15.1) </strong>小修）。该方案在63类精神疾病鉴别诊断任务中准确性超过真人专家，实现85%+的诊断一致性。</li>
+                    <li><strong>多模态情感计算：</strong> 领导完成了 AI 在 PTSD 诊断中的系统性综述（发表于 <strong>Nature npj Mental Health</strong>），定义了该领域的自动化评估标准。</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 强制换页 -->
+        <div class="page-break"></div>
+
+        <!-- Selected Publications -->
+        <section>
+            <div class="section-title"><i class="fas fa-book"></i> 精选论文发表 (Selected Publications)</div>
+            <div style="font-size: 12px; color: #666; margin-bottom: 8px; font-style: italic;">
+                * 3年内发表 10+ 篇高质量文章 | 总引用: 430+ | 包含 ACL, NAACL, IEEE JBHI, Nature npj 等顶级期刊会议
+            </div>
+            
+            <div class="pub-item">
+                1. Wan G*, <strong>Wu Y*</strong>, Chen J, Li S. "Reasoning Aware Self-Consistency: Leveraging Reasoning Paths for Efficient LLM Sampling." <strong>NAACL 2025 (CCF-B / NLP Top Conference)</strong>.
+            </div>
+
+            <div class="pub-item">
+                2. <strong>Wu Y*</strong>, Mao K, Zhang Y, Chen J. "Callm: Enhancing clinical interview analysis through data augmentation with large language models." <strong>IEEE JBHI 2024 (中科院 2 区 / 医学顶刊)</strong>.
+            </div>
+
+            <div class="pub-item">
+                3. <strong>Wu Y*</strong>, Wan G, et al. "Mind AI's Mind: A Clinically Aligned Explainable AI Pipeline for Depression Diagnosis via Large Language Models." <strong>IEEE TAFFC 2025 (中科院 1 区 / CCF-B / 计算机顶刊)</strong>.
+            </div>
+
+            <div class="pub-item">
+                4. Wan G*, <strong>Wu Y*</strong>, et al. "Derailer-rerailer: Adaptive verification for efficient and reliable language model reasoning." <strong>ACL 2025 (CCF-A / NLP Top Conference)</strong>.
+            </div>
+
+            <div class="pub-item">
+                5. <strong>Wu Y*</strong>, Mao K, Zhang Y, Chen J. "Automatic Post-Traumatic Stress Disorder Diagnosis via Clinical Transcripts: A Novel Text Augmentation with Large Language Models." <strong>BioCAS 2023 (Circuit and Systems / Medical AI)</strong>.
+            </div>
+
+            <div class="pub-item">
+                6. <strong>Wu Y*</strong>, Mao K, Dennett L, Zhang Y, Chen J. "Systematic review of machine learning in PTSD studies for automated diagnosis evaluation." <strong>npj Mental Health Research (Nature Portfolio)</strong>.
+            </div>
+
+            <div class="pub-item">
+                7. Ma L, Zhao S, <strong>Wu Y*</strong>, <strong>Chen J*</strong>. "An Explainable Multi-Modal Deep Learning–Enhanced Framework for Automated Depression Detection." <strong>ISCAS 2026 (CCF-C / Flagship Conference in Circuits and Systems)</strong>.
+            </div>
+        </section>
+
+        <!-- Honors & Awards -->
+        <section>
+            <div class="section-title"><i class="fas fa-trophy"></i> 核心荣誉 (Honors & Awards)</div>
+            <div class="skills-grid" style="grid-template-cols: 80px 1fr;">
+                <div class="skills-label">2025</div>
+                <div>上海市超级博士后 / 上海市引才计划 / 复旦大学超级博士后 / 全国高交会优秀成果奖</div>
+            </div>
+            <div class="skills-grid" style="grid-template-cols: 80px 1fr;">
+                <div class="skills-label">2023-2024</div>
+                <div>IEEE 全球医疗创业大赛三等奖 (Global 3rd Place) / 全国高交会优秀成果奖 / 阿尔伯塔杰出博士生奖学金 / 国家公派留学奖学金 (CSC)</div>
+            </div>
+            <div class="skills-grid" style="grid-template-cols: 80px 1fr;">
+                <div class="skills-label">2017-2023</div>
+                <div> 连续 6 年院长荣誉名单</div>
+            </div>
+        </section>
+
+        <!-- Skills & Interests -->
+        <section>
+            <div class="section-title"><i class="fas fa-tools"></i> 技能与个人特质 (Skills & Interests)</div>
+            
+            <div class="skills-grid">
+                <div class="skills-label">人工智能 (AI):</div>
+                <div>Agentic Workflow, LLM Fine-tuning, Multi-Agent Systems, Reinforcement Learning (RL), NLP, Computer Vision</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-label">全栈开发:</div>
+                <div>Python (PyTorch, TensorFlow), C#, MATLAB, SQL, Edge AI Deployment</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-label">AIGC:</div>
+                <div>AI产品设计、图片设计、美工设计、Vibe Coding、视频剪辑及生成、Voice Cloning、ASR</div>
+            </div>
+             <div class="skills-grid">
+                <div class="skills-label">学术服务:</div>
+                <div><strong>审稿人:</strong> IEEE JBHI, ACL, NAACL, IEEE BioCAS, IEEE TAFFC</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-label">特邀报告:</div>
+                <div>2026世界精神疾病与精神治疗大会 (土耳其), 2024 世界精神病学大会 (墨西哥), 2024 耶鲁大学 AI 论坛, 2024 信息技术研讨会 (曼谷)</div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-label">个人特质:</div>
+                <div><strong>11年海外生活:</strong> 跨文化领导力；Native Speaker级英文能力；独立思考能力 | <strong>艺术与运动:</strong> 精通声乐、架子鼓；擅长健身、滑雪、攀岩 </div>
+            </div>
+        </section>
+        
+        <!-- Footer for Print -->
+        <div class="no-print" style="margin-top: 30px; text-align: center;">
+            <button onclick="window.print()" style="background: #0f172a; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                <i class="fas fa-print"></i> 下载 PDF / 打印简历
+            </button>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,156 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" data-lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuqi Wu - Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yuqi Wu | Ph.D. | AI Researcher & Founder" />
+  <title>Yuqi Wu | Personal Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <div class="background-image"></div>
-        <div class="header-content">
-            <h1 data-en="Yuqi Wu"
-            data-cn="é‚¬å®‡å¥‡">Yuqi Wu</h1>
-            <p data-en="Ph.D. in Biomedical Engineering  | Researcher in AI for Mental Health"
-               data-cn="äººå·¥æ™ºèƒ½ç”Ÿç‰©å·¥ç¨‹åšå£« | ç²¾ç¥å¥åº·é¢†åŸŸçš„äººå·¥æ™ºèƒ½ç ”ç©¶å‘˜">
-               Ph.D. in Electrical Engineering | Researcher in AI for Mental Health
-            </p>
-            <div class="language-switcher">
-                <button id="en-btn" class="lang-btn active">EN</button>
-                <button id="cn-btn" class="lang-btn">ä¸­æ–‡</button>
-            </div>
+  <div class="bg-orb orb-1" aria-hidden="true"></div>
+  <div class="bg-orb orb-2" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">YW</span>
+      <span class="brand-name">Yuqi Wu</span>
+    </div>
+    <nav class="nav">
+      <a href="#about" data-i18n="nav_about">¹ØÓÚ</a>
+      <a href="#focus" data-i18n="nav_focus">·½Ïò</a>
+      <a href="#highlights" data-i18n="nav_highlights">ÁÁµã</a>
+      <a href="#publications" data-i18n="nav_publications">ÂÛÎÄ</a>
+      <a href="#contact" data-i18n="nav_contact">ÁªÏµ</a>
+      <a class="cta" href="YWU_CV.html" target="_blank" rel="noopener" data-i18n="nav_cv">²é¿´¼òÀú</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">EN</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow" data-i18n="hero_eyebrow">AI Researcher ¡¤ Founder ¡¤ Ph.D.</p>
+        <h1 data-i18n="hero_title">ÒÔ¿ÉÑéÖ¤µÄÖÇÄÜ£¬Á¬½ÓÒ½Ñ§Óë²úÒµ</h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          11Äêº£Íâ¿ÆÑĞÓë²úÒµ¾­Ñé£¬×¨×¢ÓÚ¶àÄ£Ì¬Çé¸Ğ¼ÆËã¡¢Ò½ÁÆ´óÄ£ĞÍÍÆÀíÓëÊı×ÖĞÄÀí½¡¿µ²úÆ·»¯¡£
+        </p>
+        <div class="hero-actions">
+          <a class="primary" href="YWU_CV.html" target="_blank" rel="noopener" data-i18n="hero_cv">½øÈëCV</a>
+          <a class="ghost" href="#contact" data-i18n="hero_contact">ÁªÏµÎÒ</a>
         </div>
-        <nav>
-            <a href="#about" data-en="About" data-cn="å…³äºæˆ‘">About</a>
-            <a href="#education" data-en="Education" data-cn="æ•™è‚²ç»å†">Education</a>
-            <a href="#research" data-en="Research" data-cn="ç ”ç©¶ç»å†">Research</a>
-            <a href="#publications" data-en="Publications" data-cn="æ–‡çŒ®å‘è¡¨">Publications</a>
-            <a href="#activities" data-en="Academic Activities" data-cn="å­¦æœ¯æ´»åŠ¨">Academic Activities</a>
-            <a href="#services" data-en="Services" data-cn="æœåŠ¡">Services</a>
-            <a href="#awards" data-en="Awards" data-cn="å¥–é¡¹">Awards</a>
-            <a href="#contact" data-en="Contact" data-cn="è”ç³»æ–¹å¼">Contact</a>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2 data-en="About Me" data-cn="å…³äºæˆ‘">About Me</h2>
-        <div class="profile-container">
-            <img src="images/profile.jpg" alt="Yuqi Wu" class="profile-picture">
-            <p data-en="I am currently a Ph.D. Candidate specializing in Biomedical Engineering and Aritificial Intelligence at the University of Alberta supervised by Dr. Jie Chen.
-            My research focuses on leveraging AI and large language models for mental health diagnostics/intervention and Psychological Simulation (Digital Twin for Psychiatry)."
-                data-cn="æˆ‘ç›®å‰æ˜¯å¤æ—¦å¤§å­¦é™ˆé¢‰é™¢å£«çš„äººå·¥æ™ºèƒ½ä¸“ä¸šåšå£«ç”Ÿã€‚æˆ‘çš„ç ”ç©¶ä¾§é‡äºåˆ©ç”¨äººå·¥æ™ºèƒ½å’Œå¤§å‹è¯­è¨€æ¨¡å‹è¿›è¡Œå¿ƒç†å¥åº·è¯Šæ–­/å¹²é¢„ä»¥åŠå¿ƒç†å­¦ç¤¾ä¼šä»¿çœŸç³»ç»Ÿï¼ˆæ•°å­—å­ªç”Ÿï¼‰ã€‚">
-                I am currently a Ph.D. Candidate specializing in Biomedical Engineering and Aritificial Intelligence at the University of Alberta supervised by Dr. Jie Chen.
-                My research focuses on leveraging AI and large language models for mental health diagnostics/intervention and Psychological Simulation (Digital Twin for Psychiatry). 
-            </p>
+        <div class="hero-meta">
+          <span data-i18n="hero_location">Shanghai ¡¤ China</span>
+          <span data-i18n="hero_role">Founder & CEO, KeyLink AI</span>
         </div>
+      </div>
+      <div class="hero-card">
+        <img src="images/ywu.png" alt="Yuqi Wu" />
+        <div class="hero-card-info">
+          <h2 data-i18n="card_name">ÎâÓîç÷</h2>
+          <p data-i18n="card_title">ÈË¹¤ÖÇÄÜ²©Ê¿ ¡¤ ´´ÒµÕß</p>
+        </div>
+      </div>
     </section>
 
-    <section id="education">
-        <h2 data-en="Education" data-cn="æ•™è‚²ç»å†">Education</h2>
-        <ul>
-            <li data-en="Ph.D. in Electrical Engineering (Biomedical Engineering), University of Alberta, 2022 - Present "
-                data-cn="ç”µæ°”å·¥ç¨‹åšå£«ï¼ˆç”Ÿç‰©åŒ»å­¦å·¥ç¨‹ï¼‰,é˜¿å°”ä¼¯å¡”å¤§å­¦ï¼Œ2022å¹´è‡³ä»Š">
-                Ph.D. in Electrical Engineering (Biomedical Engineering) University of Alberta, 2022 - Present 
-            </li>
-            <li data-en="BSc in Electrical Engineering (Nano) with Math Minor, University of Alberta, 2017 - 2022 "
-                data-cn="ç”µæ°”å·¥ç¨‹å­¦å£«ï¼ˆçº³ç±³æ–¹å‘ï¼‰åŠæ•°å­¦è¾…ä¿®,é˜¿å°”ä¼¯å¡”å¤§å­¦ï¼Œ2017 - 2022 ">
-                BSc. in Electrical Engineering (Nano) with Math Minor University of Alberta, 2017 - 2022 
-            </li>
-        </ul>
+    <section id="about" class="section">
+      <div class="section-header">
+        <h2 data-i18n="about_title">¹ØÓÚÎÒ</h2>
+        <p data-i18n="about_desc">ÒÔÑĞ¾¿Îªµ××ù¡¢ÒÔ²úÆ·ÎªÄ¿±êµÄAI´´ÒµÕß¡£</p>
+      </div>
+      <div class="grid two">
+        <div class="panel">
+          <h3 data-i18n="about_block_1_title">ÑĞ¾¿Óë²úÒµ»¯</h3>
+          <p data-i18n="about_block_1_body">
+            ÑĞ¾¿·½Ïò¾Û½¹ÓÚ¿ÉÑéÖ¤ÍÆÀí¡¢ÁÙ´²Êı¾İÉú³ÉÓë¶àÄ£Ì¬Çé¸ĞÀí½â£¬ÒÑÔÚACL¡¢NAACL¡¢IEEE JBHIÓëNature npjµÈÆÚ¿¯»áÒé·¢±í¡£
+          </p>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="about_block_2_title">´´ÒµÓëÂäµØ</h3>
+          <p data-i18n="about_block_2_body">
+            ´´°ìKeyLink AI£¬ÍÆ½øAIĞÄÀí×ÉÑ¯Óë¾«Éñ¼²²¡¸¨ÖúÕï¶ÏÏµÍ³½øÈë¶¥¼¶Èı¼×Ò½Ôº£¬½¨Á¢B¶Ë+ C¶ËË«²úÆ·¾ØÕó¡£
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="research">
-        <h2 data-en="Research Experience" data-cn="ç ”ç©¶ç»å†">Research Experience</h2>
-        <h3 data-en="Reasearch Assistant, Fudan University" data-cn="å¤æ—¦å¤§å­¦ç ”ç©¶åŠ©ç†">Research Assistant, Fudan University</h3>
-        <p data-en="LLM, Conversational Diagnosis, Digital Twin for Psychiatry, Social Simulation, Commercialization."
-           data-cn="å¤§æ¨¡å‹ï¼Œå¯¹è¯å¼è¯Šæ–­ï¼Œæ•°å­—å­ªç”Ÿï¼Œç¤¾ä¼šä»¿çœŸï¼Œæˆæœè½¬åŒ–">
-           LLM, Conversational Diagnosis, Digital Twin for Psychiatry, Social Simulation, Commercialization.
-        <h3 data-en="Ph.D. Student, University of Alberta" data-cn="é˜¿å°”ä¼¯å¡”å¤§å­¦åšå£«ç”Ÿ">Ph.D. Student, University of Alberta</h3>
-        <p data-en="LLM, Conversational Diagnosis, Digital Twin for Psychiatry, Social Simulation, Depression, XAI, PTSD."
-           data-cn="å¤§æ¨¡å‹ï¼Œå¯¹è¯å¼è¯Šæ–­ï¼Œæ•°å­—å­ªç”Ÿï¼Œç¤¾ä¼šä»¿çœŸï¼ŒæŠ‘éƒç—‡ï¼Œå¯è§£é‡ŠAIï¼Œåˆ›ä¼¤ååº”æ¿€éšœç¢">
-           LLM, Conversational Diagnosis, Digital Twin for Psychiatry, Social Simulation, Commercialization.
-        </p>
-        <h3 data-en="Research Assistant Co-op, University of Alberta" data-cn="é˜¿å°”ä¼¯å¡”å¤§å­¦ç ”ç©¶åŠ©ç†å®ä¹ ">Research Assistant Co-op, University of Alberta</h3>
-        <p data-en="Process Control, Reinforcement Learning, PID Tuning."
-           data-cn="å·¥ä¸šè¿‡ç¨‹æ§åˆ¶ï¼Œå¼ºåŒ–å­¦ä¹ ï¼ŒPIDå‚æ•°è°ƒæ•´">
-           Process Control, Reinforcement Learning, PID Tuning.
-        </p>
-    </section>
-    <section id="Publications">
-        <h2 data-en="Publications" data-cn="æ–‡çŒ®å‘è¡¨">Publications</h2>
-        <ul>
-            <li>Wan G, <strong>Wu Y</strong>, Chen J, Li S. <em>CoT Rerailer: Enhancing the Reliability of Large Language Models in Complex Reasoning Tasks through Error Detection and Correction</em>. arXiv preprint arXiv:2408.13940. 2024 Aug 25.</li>
-            <li>Wan G, <strong>Wu Y</strong>, Chen J, Li S. <em>Dynamic Self-Consistency: Leveraging Reasoning Paths for Efficient LLM Sampling</em>. arXiv preprint arXiv:2408.17017. 2024 Aug 30.</li>
-            <li>Wang Z, <strong>Wu Y</strong>, Wang S, Chen J, Wang X. <em>A Highly Integrated Wearable System For Real-Time Fall Detection Empowered by Edge AI</em>. In 2024 IEEE BioCAS. 2024 Oct 24. IEEE.</li>
-            <li><strong>Wu Y</strong>, Mao K, Zhang Y, Chen J. <em>CALLM: Enhancing Clinical Interview Analysis through Data Augmentation with Large Language Models</em>. IEEE Journal of Biomedical and Health Informatics. 2024 Jul 29.</li>
-            <li>Wan G, <strong>Wu Y</strong>, Hu M, Chu Z, Li S. <em>Bridging causal discovery and large language models: A comprehensive survey of integrative approaches and future directions</em>. arXiv preprint arXiv:2402.11068. 2024 Feb 16.</li>
-            <li><strong>Wu Y</strong>, Huang W, Ye X, Chen J. <em>AÄ«Care: An Affordable, Reliable, and Intelligent Senior Care Ecosystem</em>. In 2023 IEEE BioCAS. 2023 Oct 18 (pp. 1). IEEE.</li>
-            <li><strong>Wu Y</strong>, Mao K, Zhang Y, Chen J. <em>Automatic Post-Traumatic Stress Disorder Diagnosis via Clinical Transcripts: A Novel Text Augmentation with Large Language Models</em>. In 2023 IEEE BioCAS. 2023 Oct 18 (pp. 1-5). IEEE.</li>
-            <li>Mao K, <strong>Wu Y</strong>, Chen J. <em>A systematic review on automated clinical depression diagnosis</em>. npj Mental Health Research. 2023 Nov 20;2(1):20.</li>
-            <li><strong>Wu Y</strong>, Mao K, Dennett L, Zhang Y, Chen J. <em>Systematic review of machine learning in PTSD studies for automated diagnosis evaluation</em>. npj Mental Health Research. 2023 Sep 27;2(1):16.</li>
-            <li>Dogru O, Velswamy K, Ibrahim F, <strong>Wu Y</strong>, Sundaramoorthy AS, Huang B, Xu S, Nixon M, Bell N. <em>Reinforcement learning approach to autonomous PID tuning</em>. Computers & Chemical Engineering. 2022 May 1;161:107760.</li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </ul>
-    </section>
-    <section id="activities">
-        <h2 data-en="Academic Activities" data-cn="å­¦æœ¯æ´»åŠ¨">Academic Activities</h2>
-        <ul>
-            <li data-en="2024 Conference on AI, ML, and Business Analytics, Yale University" data-cn="2024äººå·¥æ™ºèƒ½ã€æœºå™¨å­¦ä¹ å’Œå•†ä¸šåˆ†æä¼šè®®ï¼Œè€¶é²å¤§å­¦">2024 Conference on AI, ML, and Business Analytics, Yale University</li>
-            <li data-en="2024 Workshop on Information Technologies and Systems, Bangkok" data-cn="2024ä¿¡æ¯æŠ€æœ¯ä¸ç³»ç»Ÿç ”è®¨ä¼šï¼Œæ›¼è°·">2024 Workshop on Information Technologies and Systems, Bangkok</li>
-            <li data-en="2024 University of Alberta Research Day poster presentation" data-cn="2024é˜¿å°”ä¼¯å¡”å¤§å­¦ç ”ç©¶æ—¥æµ·æŠ¥å±•ç¤º">2024 University of Alberta Research Day poster presentation</li>
-            <li data-en="2024 IEEE BioCAS Conference reviewer and poster presentation" data-cn="2024 IEEE BioCASä¼šè®®è¯„å®¡å‘˜å’Œæµ·æŠ¥å±•ç¤º">2024 IEEE BioCAS Conference reviewer and poster presentation</li>
-            <li data-en="2024 IEEE BioCAS Conference Grant Challenge Committee" data-cn="2024 IEEE BioCASä¼šè®®èµ„åŠ©æŒ‘æˆ˜å§”å‘˜ä¼š">2024 IEEE BioCAS Conference Grant Challenge Committee</li>
-            <li data-en="2024 World Congress of Psychiatry E-Poster presentation, Mexico City" data-cn="2024ä¸–ç•Œç²¾ç¥ç—…å­¦å¤§ä¼šç”µå­æµ·æŠ¥å±•ç¤ºï¼Œå¢¨è¥¿å“¥åŸ">2024 World Congress of Psychiatry E-Poster presentation, Mexico City</li>
-            <li data-en="2023 IEEE BioCAS Conference poster and live presentation" data-cn="2023 IEEE BioCASä¼šè®®æµ·æŠ¥å’Œç°åœºå±•ç¤º">2023 IEEE BioCAS Conference poster and live presentation</li>
-            
-        </ul>
+    <section id="focus" class="section">
+      <div class="section-header">
+        <h2 data-i18n="focus_title">ÑĞ¾¿Óë²úÆ··½Ïò</h2>
+        <p data-i18n="focus_desc">¿É½âÊÍ¡¢¿ÉÑéÖ¤¡¢¿ÉÂäµØµÄÒ½ÁÆAI¡£</p>
+      </div>
+      <div class="grid three">
+        <div class="panel">
+          <h3 data-i18n="focus_1_title">LLMÍÆÀí¿ÉĞÅĞÔ</h3>
+          <p data-i18n="focus_1_body">RASCÓëDerailer-Rerailer¿ò¼Ü£¬ÌáÉıÒ½ÁÆ³¡¾°ÍÆÀí¿É¿¿ĞÔ¡£</p>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="focus_2_title">ÁÙ´²Êı¾İÉú³É</h3>
+          <p data-i18n="focus_2_body">CALLM·½·¨ÏÔÖø½µµÍ¸ßÖÊÁ¿±ê×¢Êı¾İ³É±¾¡£</p>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="focus_3_title">Êı×ÖĞÄÀí½¡¿µ</h3>
+          <p data-i18n="focus_3_body">ÃæÏòB¶ËÒ½ÔºÓëC¶ËÓÃ»§µÄĞÄÀíÅã°éÓëÕïÁÆÖ§³ÖÏµÍ³¡£</p>
+        </div>
+      </div>
     </section>
 
-    <section id="services">
-        <h2 data-en="Services" data-cn="æœåŠ¡">Services</h2>
-        <ul>
-            <li data-en="IEEE Journal of Biomedical and Health Informatics Reviewer" data-cn="IEEE Journal of Biomedical and Health Informaticså®¡ç¨¿äºº">IEEE Journal of Biomedical and Health Informatics Reviewer</li>
-            <li data-en="IEEE Biomedical Circuit and System Conference Reviewer" data-cn="IEEE Biomedical Circuit and System Conferenceå®¡ç¨¿äºº">IEEE Biomedical Circuit and System Conference Reviewer</li>
-            <li data-en="IEEE International Symposium on Circuits and Systems Reviewer" data-cn="IEEE International Symposium on Circuits and Systemså®¡ç¨¿äºº">IEEE International Symposium on Circuits and Systems Reviewer</li>
-        </ul>
-    </section>
-    <section id="awards">
-        <h2>Awards & Honors</h2>
-        <ul>
-            <li>IEEE BioCAS Conference Entrepreneurship Competition, 3rd Prize, 2023</li>
-            <li>University of Alberta Dean's Honors List (2018-2023)</li>
-            <li>Alberta Graduate Excellence Scholarship, 2023-2024</li>
-            <li>University of Alberta Deanâ€™s Research Award 2019</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2 data-en="Contact" data-cn="è”ç³»æ–¹å¼">Contact</h2>
-        <p data-en="Email: yuqi14@ualberta.ca" data-cn="é‚®ç®±: yuqi14@ualberta.ca">
-           Email: <a href="mailto:yuqi14@ualberta.ca">yuqi14@ualberta.ca</a>
-        </p>
-        <p data-en="Phone: 639-471-1721" data-cn="ç”µè¯: 639-471-1721">
-           Phone: 639-471-1721
-        </p>
-        <p data-en="Google Scholar" data-cn="è°·æ­Œå­¦æœ¯">
-            <a href="https://scholar.google.com/citations?user=nJSu8HcAAAAJ&hl=en&oi=ao">Google Scholar</a>
-        </p>
-        <p data-en="LinkedIn" data-cn="é¢†è‹±">
-            <a href="https://www.linkedin.com/in/yuqi-wu-71657614a/">LinkedIn</a>
+    <section id="highlights" class="section">
+      <div class="section-header">
+        <h2 data-i18n="highlights_title">¹Ø¼üÁÁµã</h2>
+        <p data-i18n="highlights_desc">´ÓÑ§Êõµ½²úÒµµÄÁ¬Ğø³É¹û¡£</p>
+      </div>
+      <div class="grid two">
+        <div class="panel stat">
+          <div class="stat-number">10+</div>
+          <div class="stat-label" data-i18n="stat_1">½ü3Äê¸ßÖÊÁ¿ÂÛÎÄ</div>
+        </div>
+        <div class="panel stat">
+          <div class="stat-number">430+</div>
+          <div class="stat-label" data-i18n="stat_2">×ÜÒıÓÃ´ÎÊı</div>
+        </div>
+        <div class="panel stat">
+          <div class="stat-number">50+</div>
+          <div class="stat-label" data-i18n="stat_3">ĞĞÒµÂ·ÑİÓë·å»á</div>
+        </div>
+        <div class="panel stat">
+          <div class="stat-number">2+</div>
+          <div class="stat-label" data-i18n="stat_4">Èı¼×Ò½ÔººÏ×÷</div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Yuqi Wu. All Rights Reserved.</p>
-    </footer>
+    <section id="publications" class="section">
+      <div class="section-header">
+        <h2 data-i18n="pub_title">´ú±íĞÔÂÛÎÄ</h2>
+        <p data-i18n="pub_desc">¾Û½¹¿ÉĞÅÍÆÀíÓëÁÙ´²AI¡£</p>
+      </div>
+      <div class="panel list">
+        <ul>
+          <li data-i18n="pub_1">Derailer-Rerailer: Adaptive Verification for Efficient and Reliable Language Model Reasoning. ACL 2025.</li>
+          <li data-i18n="pub_2">RASC: Reasoning-Aware Self-Consistency for Efficient LLM Reasoning. NAACL 2025.</li>
+          <li data-i18n="pub_3">CALLM: Clinical Interview Analysis through Data Augmentation with LLMs. IEEE JBHI, 2024.</li>
+          <li data-i18n="pub_4">Systematic review of ML in PTSD studies for automated diagnosis evaluation. Nature npj Mental Health, 2023.</li>
+        </ul>
+      </div>
+    </section>
 
-    <script src="scripts.js"></script>
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2 data-i18n="contact_title">ÁªÏµ</h2>
+        <p data-i18n="contact_desc">»¶Ó­Ñ§ÊõºÏ×÷Óë²úÒµ½»Á÷¡£</p>
+      </div>
+      <div class="grid two">
+        <div class="panel">
+          <h3 data-i18n="contact_block_title">ÁªÏµ·½Ê½</h3>
+          <p><span data-i18n="contact_phone">µç»°</span>: (+86) 186-7913-8857</p>
+          <p>Email: ywu_bh@fudan.edu.cn</p>
+          <p>Website: yuqiwu.github.io</p>
+        </div>
+        <div class="panel">
+          <h3 data-i18n="contact_block_2_title">¿ìËÙÈë¿Ú</h3>
+          <p data-i18n="contact_cv">²é¿´ÍêÕûÂÄÀúÓëÏîÄ¿Ï¸½Ú£¬Çë½øÈëCVÒ³Ãæ¡£</p>
+          <a class="primary" href="YWU_CV.html" target="_blank" rel="noopener" data-i18n="contact_cv_btn">´ò¿ªCV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>? 2026 Yuqi Wu. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
