@@ -13,7 +13,7 @@
     hero_contact: "联系我",
     hero_location: "Shanghai · China",
     hero_role: "Founder & CEO, KeyLink AI",
-    card_name: "吴宇琪",
+    card_name: "邬宇奇",
     card_title: "人工智能博士 · 创业者",
     about_title: "关于我",
     about_desc: "以研究为底座、以产品为目标的AI创业者。",
