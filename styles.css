@@ -244,6 +244,7 @@ main {
 
 .section {
   margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
 .section-header {
@@ -297,6 +298,287 @@ main {
   color: var(--ink-soft);
 }
 
+.publication-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.publication-header .section-header {
+  margin-bottom: 0;
+}
+
+.publication-profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.publication-profiles a,
+.publication-links a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 8px 11px;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.publication-profiles a:hover,
+.publication-links a:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: white;
+}
+
+.publication-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.publication-stat {
+  align-items: baseline;
+  background: rgba(251, 249, 246, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  display: flex;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+.publication-stat strong {
+  color: var(--accent-dark);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.publication-stat span {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.publication-groups {
+  display: grid;
+  gap: 16px;
+}
+
+.panel.publication-group {
+  overflow: hidden;
+  padding: 0;
+}
+
+.publication-group summary {
+  align-items: center;
+  cursor: pointer;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  list-style: none;
+  min-height: 72px;
+  padding: 18px 22px;
+  user-select: none;
+}
+
+.publication-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.publication-group summary::after {
+  color: var(--accent-dark);
+  content: "+";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  width: 18px;
+}
+
+.publication-group[open] summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.publication-group[open] summary::after {
+  content: "−";
+}
+
+.publication-group summary:focus-visible,
+a:focus-visible,
+.lang-toggle:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 3px;
+}
+
+.publication-summary-copy {
+  display: grid;
+  gap: 3px;
+}
+
+.publication-summary-title {
+  color: var(--ink);
+  font-family: "Cormorant Garamond", "Noto Sans SC", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.publication-summary-desc {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.publication-count {
+  align-items: center;
+  background: rgba(127, 139, 128, 0.12);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  height: 28px;
+  justify-content: center;
+  min-width: 36px;
+  padding: 0 10px;
+}
+
+.publication-list {
+  counter-reset: publication;
+  padding: 0 22px 8px;
+}
+
+.publication-year-group {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 58px minmax(0, 1fr);
+  padding: 20px 0 4px;
+}
+
+.publication-year {
+  color: var(--accent-dark);
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 2px 0 0;
+  position: sticky;
+  top: 96px;
+  align-self: start;
+}
+
+.publication-items {
+  border-top: 1px solid var(--line);
+}
+
+.publication-entry {
+  border-bottom: 1px solid var(--line);
+  counter-increment: publication;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 30px minmax(0, 1fr);
+  padding: 16px 0;
+}
+
+.publication-entry:last-child {
+  border-bottom: 0;
+}
+
+.publication-index::before {
+  color: var(--muted);
+  content: counter(publication, decimal-leading-zero);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.publication-body h4 {
+  font-family: "Noto Sans SC", "Segoe UI", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 6px;
+}
+
+.publication-body h4 a {
+  text-decoration-color: transparent;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.publication-body h4 a:hover {
+  color: var(--accent-dark);
+  text-decoration-color: var(--accent-dark);
+}
+
+.publication-authors {
+  color: var(--ink-soft);
+  font-size: 12px;
+  line-height: 1.55;
+  margin-bottom: 7px;
+}
+
+.self-author {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.publication-meta,
+.publication-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 9px;
+}
+
+.publication-meta {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.publication-links {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 9px;
+}
+
+.publication-links a {
+  padding: 6px 9px;
+}
+
+.publication-badge {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  padding: 5px 8px;
+}
+
+.publication-badge.journal {
+  background: #e9eee9;
+  color: #52665a;
+}
+
+.publication-badge.conference {
+  background: #eee9e3;
+  color: #765f49;
+}
+
+.publication-badge.arxiv {
+  background: #f1e4e2;
+  color: #8a4d47;
+}
+
+.publication-badge.linked {
+  background: #e8e7f1;
+  color: #595673;
+}
+
 .site-footer {
   padding: 30px 6vw 40px;
   color: var(--muted);
@@ -321,6 +603,15 @@ main {
     grid-template-columns: 1fr;
   }
 
+  .publication-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .publication-profiles {
+    justify-content: flex-start;
+  }
+
   .hero-card img {
     height: 280px;
   }
@@ -341,5 +632,41 @@ main {
     flex-direction: column;
     gap: 6px;
   }
+
+  .publication-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-group summary {
+    min-height: 64px;
+    padding: 16px;
+  }
+
+  .publication-list {
+    padding: 0 16px 6px;
+  }
+
+  .publication-year-group {
+    gap: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .publication-year {
+    position: static;
+  }
+
+  .publication-entry {
+    gap: 8px;
+    grid-template-columns: 24px minmax(0, 1fr);
+  }
+
+  .publication-body h4 {
+    overflow-wrap: anywhere;
+  }
 }
 
+@media print {
+  .publication-group > * {
+    display: block !important;
+  }
+}

@@ -187,17 +187,76 @@
         }
 
         .pub-item {
-            font-size: 12.5px;
-            margin-bottom: 6px;
+            break-inside: avoid;
+            color: #374151;
+            font-size: 11.5px;
+            line-height: 1.4;
+            margin-bottom: 5px;
             padding-left: 0;
             text-indent: -1.5em;
             margin-left: 1.5em;
-            color: #374151;
+        }
+
+        .pub-item a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid #cbd5e1;
+        }
+
+        .pub-section-note {
+            color: #64748b;
+            font-size: 11.5px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .pub-subheading {
+            break-after: avoid;
+            color: #334155;
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            margin: 12px 0 7px;
+            padding-bottom: 3px;
+            border-bottom: 1px dashed #cbd5e1;
+        }
+
+        .pub-year-label {
+            break-after: avoid;
+            color: #64748b;
+            font-size: 11px;
+            font-weight: 700;
+            margin: 8px 0 5px;
+        }
+
+        .pub-status {
+            background: #f1f5f9;
+            border-radius: 3px;
+            color: #475569;
+            display: inline-block;
+            font-size: 9.5px;
+            font-weight: 600;
+            margin-left: 4px;
+            padding: 1px 4px;
+        }
+
+        .pub-profile-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 11px;
+            margin-bottom: 8px;
+        }
+
+        .pub-profile-links a {
+            color: #334155;
+            text-decoration: none;
+            border-bottom: 1px solid #94a3b8;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-cols: 110px 1fr;
+            grid-template-columns: 110px 1fr;
             gap: 10px;
             font-size: 12.5px;
             margin-bottom: 4px;
@@ -223,13 +282,14 @@
         <header class="header">
             <div style="flex: 1; margin-right: 30px;">
                 <h1 class="name">邬宇奇 <span style="font-size: 16px; font-weight: 400; color: #64748b;">(Yuqi Wu, Ph.D.)</span></h1>
-                <div class="title">人工智能科学家 | OPC创业者 | 奇灵智愈创始人 & CEO </div>
+                <div class="title">人工智能科学家 | OPC创业者 | 奇灵智愈创始人 &amp; CEO </div>
                 <div style="margin-top: 8px;">
-                    <span class="tag">复旦最年轻博士后</span>
+                    <span class="tag">复旦超级博士后</span>
                     <span class="tag">UofA 满绩博士(1/49)</span>
                     <span class="tag">"0-1"创业者</span>
                     <span class="tag">11年北美经历</span>
                     <span class="tag">情绪计算专家</span>
+                    <span class="tag">师承陈颉院士</span>
                 </div>
                 
                 <!-- 新的横向联系方式布局 -->
@@ -253,7 +313,7 @@
             
             <div class="entry">
                 <div class="entry-header">
-                    <div class="entry-title">复旦大学 (Fudan University)</div>
+                    <div class="entry-title">复旦大学 (Fudan University，2027年QS世界大学排名26)</div>
                     <div class="entry-date">2025.08 – 至今</div>
                 </div>
                 <div class="entry-header">
@@ -268,11 +328,11 @@
 
             <div class="entry">
                 <div class="entry-header">
-                    <div class="entry-title">阿尔伯塔大学 (University of Alberta)</div>
+                    <div class="entry-title">阿尔伯塔大学 (University of Alberta，2027年QS世界大学排名96)</div>
                     <div class="entry-date">2022.09 – 2025.06</div>
                 </div>
                 <div class="entry-header">
-                    <div class="entry-subtitle">哲学博士 (Ph.D.) | 电气工程（生物医学方向）</div>
+                    <div class="entry-subtitle">哲学博士 (Ph.D.) | 电气工程（生物医学方向）｜ 优秀毕业生 ｜ 加拿大总督奖提名</div>
                     <div class="entry-location">埃德蒙顿, 加拿大</div>
                 </div>
                 <ul class="bullet-list">
@@ -286,11 +346,11 @@
 
             <div class="entry">
                 <div class="entry-header">
-                    <div class="entry-title">阿尔伯塔大学 (University of Alberta)</div>
+                    <div class="entry-title">阿尔伯塔大学 (University of Alberta，2027年QS世界大学排名96)</div>
                     <div class="entry-date">2017.09 – 2022.06</div>
                 </div>
                 <div class="entry-header">
-                    <div class="entry-subtitle">  理学学士 (BSc., Co-op) | 电子电气工程微纳制造专精 | 数学辅修 | 杰出荣誉</div>
+                    <div class="entry-subtitle">  理学学士 (BSc., Co-op) | 电子电气工程微纳制造专精与数学双学位 | 杰出毕业生</div>
                     <div class="entry-location">埃德蒙顿, 加拿大</div>
                 </div>
                 <ul class="bullet-list">
@@ -312,7 +372,7 @@
         <div class="entry-date">2025.03 – 至今</div>
     </div>
     <div class="entry-header">
-        <div class="entry-subtitle">创始人 & 首席执行官 (Founder & CEO)</div>
+        <div class="entry-subtitle">创始人 &amp; 首席执行官 (Founder &amp; CEO)</div>
         <div class="entry-location">上海, 中国</div>
     </div>
     <ul class="bullet-list">
@@ -333,19 +393,18 @@
             亲自操刀产品Roadmap，构建“消费级物理陪伴+医疗级数字疗法”双矩阵，覆盖从硬件设计、软件开发到用户体验的全链路：
             <br>- <strong>B端医疗产品：</strong> 设计“奇灵心”一站式精神健康服务平台，集成情绪体检舱、自动化他评量表等，已部署至长三角3家顶级医院进行临床研究合作，探索设备租赁+SaaS订阅模式（单医院年客单价超50万元）。
            
-            <br>- <strong>C端消费产品：</strong> 孵化“奇灵造物”系列，主导定制化AI手办从概念到量产：基于用户照片、音频生成个性化数字分身，实现情绪陪伴功能。内测用户日增长85+，付费转化率40%，毛利率达60%。
+            <br>- <strong>C端消费产品：</strong> 孵化“奇灵造物”系列，主导定制化AI手办从概念到量产：基于用户照片、音频生成个性化数字分身，实现情绪陪伴功能。内测用户日增长85+，付费转化率40%，毛利率达60%。主打智慧文旅项目， 帮助多家城市文旅（如南昌礼物）进行数字化IP孵化，提升游客体验。
            
         </li>
         <li>
             <strong>市场分析、销售与商业化闭环：</strong> 
             通过双线战略破解心理健康市场痛点（孤独经济与医疗资源匮乏），实现B2B2C收入模型：
             <br>- <strong>市场定位：</strong> 基于9500万抑郁症患者缺口分析，锁定“随叫随到”情绪载体需求，C端产品PMF调研超500例子。设计市场调研问卷，覆盖用户画像、需求痛点、价格敏感度等维度，收集300+有效样本，指导产品迭代。
-            <br>- <strong>销售成果：</strong> 签署出海订单（10,000+手办/30,000+AI毛绒玩具），金额千万级；国内与5+企业达成定制方案，B端单量超1000。
             <br>- <strong>上下游整合：</strong> 管理供应链从芯片采购（自研AI芯片）到交付全流程，确保订单交付。
         </li>
         <li>
             <strong>投融资与品牌建设：</strong> 
-            主导公司资本策略，累计参与50+场路演（包括奇绩创坛、复旦管院科创营等），关键里程碑包括：
+            主导公司资本策略，累计参与100+场路演（包括奇绩创坛、复旦管院科创营、各类创赛等），关键里程碑包括：
             <br>- <strong>融资成果：</strong> 完成种子轮众筹, 各大商赛奖项等。
             <br>- <strong>品牌影响力：</strong> 斩获2025全国高交会优秀成果奖，与KOL合作推广C端产品，转介绍率76%，提升品牌搜索指数300%。
         </li>
@@ -355,7 +414,7 @@
 
         <!-- Professional & Research Experience (Expanded) -->
         <section>
-            <div class="section-title"><i class="fas fa-briefcase"></i> 工作与科研经历 (Professional & Research Experience)</div>
+            <div class="section-title"><i class="fas fa-briefcase"></i> 工作与科研经历 (Professional &amp; Research Experience)</div>
 
 <div class="entry">
     <div class="entry-header">
@@ -364,7 +423,7 @@
     </div>
     <div class="entry-header">
         <div class="entry-subtitle">软件开发实习生 / 实验室研究助理</div>
-        <div class="entry-location">Edmonton, AB</div>
+        <div class="entry-location">Edmonton, AB, Canada</div>
     </div>
     <ul class="bullet-list">
         <li><strong>强化学习算法落地：</strong> 探索机器学习在工业过程控制 (Process Control) 中的应用，构建了针对非线性系统的 RL 智能控制模型，解决了复杂工况下 PID 参数难以优化的工程难题。</li>
@@ -380,7 +439,7 @@
     </div>
     <div class="entry-header">
         <div class="entry-subtitle">网络建模工程师 (Network Modeler Co-op)</div>
-        <div class="entry-location">Edmonton, AB</div>
+        <div class="entry-location">Edmonton, AB, Canada</div>
     </div>
     <ul class="bullet-list">
         <li><strong>电网模型升级项目：</strong> 负责配电系统网络模型 (Network Model) 的更新维护。基于 Distribution Construction Standards 手册，将复杂的 CAD 图纸和现场勘测数据转化为标准的 GIS 数字模型。</li>
@@ -398,11 +457,10 @@
                     <div class="entry-subtitle">核心研究员</div>
                 </div>
                 <ul class="bullet-list">
-                    <li><strong>幻觉防御算法 (RASC & Derailer-Rerailer)：</strong> 针对医疗 AI “幻觉”的痛点，设计了自适应推理验证框架。模拟医生“审视-修正”的思维链，在 <strong>ACL / NAACL 2025</strong> 发表 2 篇顶会论文，显著提升了模型在复杂精神科病例中的逻辑忠实度。</li>
+                    <li><strong>幻觉防御算法 (RASC &amp; Derailer-Rerailer)：</strong> 针对医疗 AI “幻觉”的痛点，设计了自适应推理验证框架。模拟医生“审视-修正”的思维链，在 <strong>ACL / NAACL 2025</strong> 发表 2 篇顶会论文，显著提升了模型在复杂精神科病例中的逻辑忠实度。</li>
                     <li><strong>临床数据生成 (CALLM)：</strong> 针对医疗数据隐私壁垒，提出基于 LLM 的数字孪生访谈生成技术（发表于 <strong>IEEE JBHI (IF: 6.8)</strong>）。该方案将高质量标注数据的获取成本<strong>降低了 99%</strong>，解决了行业数据孤岛问题。</li>
                     <li><strong>临床可解释诊断模型：</strong> 针对医疗“黑盒”模型痛点，提出基于 LLM 的可解释、因果性分析模型（发表于 <strong>IEEE TAFFC (IF: 9.8)</strong>）。该方案为精神疾病诊断系统提供了可解释性支持，极大程度提升了诊断的准确性与可靠性。</li>
-                    <li><strong>智慧脑对话式诊断模型 (WiseMind)：</strong> 创新性打破传统分类式诊断范式，开创精神疾病领域基于 LLM 的对话式诊断技术（<strong>Nature npj Digital Medicine (IF: 15.1) </strong>）。该方案在63类精神疾病鉴别诊断任务中准确性超过真人专家，实现85%+的诊断一致性。</li>
-                    <li><strong>多模态情感计算：</strong> 领导完成了 AI 在 PTSD 诊断中的系统性综述（发表于 <strong>Nature npj Mental Health</strong>），定义了该领域的自动化评估标准。</li>
+                    <li><strong>智慧脑对话式诊断模型 (WiseMind)：</strong> 创新性打破传统分类式诊断范式，开创精神疾病领域基于 LLM 的对话式诊断技术（<strong>Nature npj Digital Medicine (IF: 18) </strong>）。该方案在63类精神疾病鉴别诊断任务中准确性超过真人专家，实现85%+的诊断一致性。</li>
                 </ul>
             </div>
         </section>
@@ -410,58 +468,139 @@
         <!-- 强制换页 -->
         <div class="page-break"></div>
 
-        <!-- Selected Publications -->
+        <!-- Complete Publications -->
         <section>
-            <div class="section-title"><i class="fas fa-book"></i> 精选论文发表 (Selected Publications)</div>
-            <div style="font-size: 12px; color: #666; margin-bottom: 8px; font-style: italic;">
-                * 3年内发表 10+ 篇高质量文章 | 总引用: 580+ | 包含 ACL, NAACL,npj Digital Medicine,IEEE TAFFC, IEEE JBHI, Nature npj 等顶级期刊会议
+            <div class="section-title"><i class="fas fa-book"></i> 完整论文发表 (Complete Publications)</div>
+            <div class="pub-section-note">
+                正式发表记录 19 篇（期刊与会议）｜ArXiv 记录 9 条（5 篇独立预印本，另 4 条为正式论文早期版本）｜Google Scholar 引用 650+（截至 2026.08）
             </div>
-            
-            <div class="pub-item">
-                1. <strong>Wu Y*</strong>, Wan G, Li J, Zhao S, Ma L, Ye T, Zhang M, Pop I, Zhang Y, Chen J. "WiseMind: a knowledge-guided multi-agent framework for accurate and empathetic psychiatric diagnosis." <strong>npj Digital Medicine (新锐 1 区 / 医学顶刊 / IF = 18.0)</strong>.
-            </div>
-
-            <div class="pub-item">
-                2. Wan G*, <strong>Wu Y*</strong>, Chen J, Li S. "Reasoning Aware Self-Consistency: Leveraging Reasoning Paths for Efficient LLM Sampling." <strong>NAACL 2025 (CCF-B / NLP Top Conference)</strong>.
+            <div class="pub-profile-links">
+                <a href="https://scholar.google.com/citations?user=nJSu8HcAAAAJ">Google Scholar</a>
+                <a href="https://orcid.org/0000-0002-6527-2221">ORCID: 0000-0002-6527-2221</a>
             </div>
 
+            <div class="pub-subheading">正式发表 (Published Works · 19)</div>
+
+            <div class="pub-year-label">2026</div>
             <div class="pub-item">
-                3. <strong>Wu Y*</strong>, Mao K, Zhang Y, Chen J. "Callm: Enhancing clinical interview analysis through data augmentation with large language models." <strong>IEEE JBHI 2024 (新锐 1 区 / 医学顶刊 / IF = 7.8)</strong>.
+                1. <strong>Wu Y</strong>, Wan G, Dong R, Kassam IZ, Wiseman BC, Rho J, Graziano N, Wang X, Zhang Y, Chen J. “<a href="https://doi.org/10.1109/TAFFC.2025.3634148">Mind AI's Mind: A Clinically Aligned Explainable AI Pipeline for Depression Diagnosis via Large Language Models</a>.” <strong>IEEE Transactions on Affective Computing</strong>, 17(1), 739–756. <span class="pub-status">Online 2025 · Issue 2026</span>
+            </div>
+            <div class="pub-item">
+                2. <strong>Wu Y</strong>, Wan G, Li J, Zhao S, Ma L, Ye T, Zhang M, Pop I, Zhang Y, Chen J. “<a href="https://doi.org/10.1038/s41746-026-02559-9">WiseMind: a knowledge-guided multi-agent framework for accurate and empathetic psychiatric diagnosis</a>.” <strong>npj Digital Medicine</strong>, 9, 575.
+            </div>
+            <div class="pub-item">
+                3. Sharma D, …, <strong>Wu Y</strong>, …, Bhat V. “<a href="https://doi.org/10.1038/s41746-026-02453-4">Reimagining psychiatric care with agentic AI: promise, challenges, and a roadmap forward</a>.” <strong>npj Digital Medicine</strong>, 9, 252.
+            </div>
+            <div class="pub-item">
+                4. Tan P, <strong>Wu Y</strong>, Chen X, Chen JF, Guo Z, Lu X, Chen J, Zhang H. “<a href="https://doi.org/10.1038/s44184-026-00205-6">A systematic review on mindfulness-based immersive interventions in depressive disorders</a>.” <strong>npj Mental Health Research</strong>, 5, 22.
+            </div>
+            <div class="pub-item">
+                5. Ma L, Zhao S, <strong>Wu Y</strong>, Chen J. “<a href="https://doi.org/10.1109/ISCAS66217.2026.11562991">An Explainable Multi-modal Deep Learning–Enhanced Framework for Automated Depression Detection</a>.” <strong>IEEE ISCAS 2026</strong>, 4859–4863.
+            </div>
+            <div class="pub-item">
+                6. Liu Y, <strong>Wu Y</strong>, Zhao S, Ye T, Chen J. “<a href="https://doi.org/10.1109/ISCAS66217.2026.11562617">Empirical Study of Process Reward-Guided Model Ensemble for Edge Reasoning</a>.” <strong>IEEE ISCAS 2026</strong>, 1849–1853.
             </div>
 
+            <div class="pub-year-label">2025</div>
             <div class="pub-item">
-                4. <strong>Wu Y*</strong>, Wan G, et al. "Mind AI's Mind: A Clinically Aligned Explainable AI Pipeline for Depression Diagnosis via Large Language Models." <strong>IEEE TAFFC 2025 (新锐 1 区 / CCF-B / 计算机顶刊 / IF = 11.1)</strong>.
+                7. Wan G, <strong>Wu Y</strong>, Chen J, Li S. “<a href="https://doi.org/10.18653/v1/2025.naacl-long.184">Reasoning Aware Self-Consistency: Leveraging Reasoning Paths for Efficient LLM Sampling</a>.” <strong>NAACL 2025 Long Papers</strong>, 3613–3635.
+            </div>
+            <div class="pub-item">
+                8. Wan G, <strong>Wu Y</strong>, Wang H, Zhao S, Chen J, Li S. “<a href="https://doi.org/10.18653/v1/2025.findings-acl.18">Derailer-Rerailer: Adaptive Verification for Efficient and Reliable Language Model Reasoning</a>.” <strong>Findings of ACL 2025</strong>, 327–348.
+            </div>
+            <div class="pub-item">
+                9. Wan G, Lu Y, <strong>Wu Y</strong>, Hu M, Li S. “<a href="https://doi.org/10.24963/ijcai.2025/1186">Large Language Models for Causal Discovery: Current Landscape and Future Directions</a>.” <strong>IJCAI 2025 Survey Track</strong>, 10687–10695.
+            </div>
+            <div class="pub-item">
+                10. Teferra BG, …, <strong>Wu Y</strong>, …, Bhat V. “<a href="https://doi.org/10.1371/journal.pdig.0000943">Leveraging large language models for automated depression screening</a>.” <strong>PLOS Digital Health</strong>, 4(7), e0000943.
             </div>
 
+            <div class="pub-year-label">2024</div>
             <div class="pub-item">
-                5. Wan G*, <strong>Wu Y*</strong>, et al. "Derailer-rerailer: Adaptive verification for efficient and reliable language model reasoning." <strong>ACL 2025 (CCF-A / NLP Top Conference)</strong>.
+                11. <strong>Wu Y</strong>, Mao K, Zhang Y, Chen J. “<a href="https://doi.org/10.1109/JBHI.2024.3435085">CALLM: Enhancing Clinical Interview Analysis Through Data Augmentation With Large Language Models</a>.” <strong>IEEE Journal of Biomedical and Health Informatics</strong>, 28(12), 7531–7542.
+            </div>
+            <div class="pub-item">
+                12. <strong>Wu Y</strong>, Huang W, Ye X, Chen J. “<a href="https://doi.org/10.1109/MCAS.2024.3358277">AiCare: An Affordable, Reliable, and Intelligent Senior Care Ecosystem [Innovations Corner]</a>.” <strong>IEEE Circuits and Systems Magazine</strong>, 24(3), 37–38. <span class="pub-status">BioCAS 项目延展</span>
+            </div>
+            <div class="pub-item">
+                13. Wang Z, <strong>Wu Y</strong>, Wang S, Wang XH, Du L, Du Y, Chen J. “<a href="https://doi.org/10.1109/BioCAS61083.2024.10798394">Artificial Intelligence Design for Real-time Fall Detection</a>.” <strong>IEEE BioCAS 2024</strong>, 1–5.
             </div>
 
+            <div class="pub-year-label">2023</div>
             <div class="pub-item">
-                6. <strong>Wu Y*</strong>, Mao K, Zhang Y, Chen J. "Automatic Post-Traumatic Stress Disorder Diagnosis via Clinical Transcripts: A Novel Text Augmentation with Large Language Models." <strong>BioCAS 2023 (Circuit and Systems / Medical AI)</strong>.
+                14. <strong>Wu Y</strong>, Mao K, Dennett L, Zhang Y, Chen J. “<a href="https://doi.org/10.1038/s44184-023-00035-w">Systematic review of machine learning in PTSD studies for automated diagnosis evaluation</a>.” <strong>npj Mental Health Research</strong>, 2, 16.
+            </div>
+            <div class="pub-item">
+                15. Mao K, <strong>Wu Y</strong>, Chen J. “<a href="https://doi.org/10.1038/s44184-023-00040-z">A systematic review on automated clinical depression diagnosis</a>.” <strong>npj Mental Health Research</strong>, 2, 20.
+            </div>
+            <div class="pub-item">
+                16. <strong>Wu Y</strong>, Chen J, Mao K, Zhang Y. “<a href="https://doi.org/10.1109/BioCAS58349.2023.10388714">Automatic Post-Traumatic Stress Disorder Diagnosis via Clinical Transcripts: A Novel Text Augmentation with Large Language Models</a>.” <strong>IEEE BioCAS 2023</strong>, 1–5.
+            </div>
+            <div class="pub-item">
+                17. <strong>Wu Y</strong>, Huang W, Ye X, Chen J. “<a href="https://doi.org/10.1109/BioCAS58349.2023.10388962">AīCare: An Affordable, Reliable, and Intelligent Senior Care Ecosystem</a>.” <strong>IEEE BioCAS 2023</strong>, 1–6. <span class="pub-status">会议版本</span>
             </div>
 
+            <div class="pub-year-label">2022</div>
             <div class="pub-item">
-                7. <strong>Wu Y*</strong>, Mao K, Dennett L, Zhang Y, Chen J. "Systematic review of machine learning in PTSD studies for automated diagnosis evaluation." <strong>npj Mental Health Research (新锐 1 区 / 医学顶刊 / IF = 9.1)</strong>.
+                18. Dogru O, Velswamy K, Ibrahim F, <strong>Wu Y</strong>, Sundaramoorthy AS, Huang B, Xu S, Nixon M, Bell N. “<a href="https://doi.org/10.1016/j.compchemeng.2022.107760">Reinforcement learning approach to autonomous PID tuning</a>.” <strong>Computers &amp; Chemical Engineering</strong>, 161, 107760. <span class="pub-status">期刊版本</span>
+            </div>
+            <div class="pub-item">
+                19. Dogru O, Velswamy K, Ibrahim F, <strong>Wu Y</strong>, Sundaramoorthy AS, Huang B, Xu S, Nixon M, Bell N. “<a href="https://doi.org/10.23919/ACC53348.2022.9867687">Reinforcement Learning Approach to Autonomous PID Tuning</a>.” <strong>American Control Conference 2022</strong>, 2691–2696. <span class="pub-status">会议版本</span>
             </div>
 
+            <div class="pub-subheading">ArXiv 记录 (9 records · 4 linked to published versions)</div>
+
+            <div class="pub-year-label">2026</div>
             <div class="pub-item">
-                8. Ma L, Zhao S, <strong>Wu Y*</strong>, <strong>Chen J*</strong>. "An Explainable Multi-Modal Deep Learning–Enhanced Framework for Automated Depression Detection." <strong>ISCAS 2026 (CCF-B / Flagship Conference in Circuits and Systems)</strong>.
+                A1. <strong>Wu Y</strong>, Zhao S, Chen J. “<a href="https://arxiv.org/abs/2608.08159">When Is a Steerable Concept Representation Real? Measurement Confounds in a Cross-Family Audit of Neuroscience Parallels in LLMs</a>.” <strong>arXiv:2608.08159</strong>, v1. <span class="pub-status">独立预印本</span>
+            </div>
+            <div class="pub-item">
+                A2. <strong>Wu Y</strong>, Zhao S, Chen J. “<a href="https://arxiv.org/abs/2608.08139">TokenPrint: A Calibrated Token-Space Fingerprint for Language-Model Provenance</a>.” <strong>arXiv:2608.08139</strong>, v1. <span class="pub-status">独立预印本</span>
+            </div>
+
+            <div class="pub-year-label">2025</div>
+            <div class="pub-item">
+                A3. Parkington K, …, <strong>Wu Y</strong>, …, Bhat V. “<a href="https://arxiv.org/abs/2507.08002">Human vs. LLM-Based Thematic Analysis for Digital Mental Health Research: Proof-of-Concept Comparative Study</a>.” <strong>arXiv:2507.08002</strong>, v1. <span class="pub-status">独立预印本</span>
+            </div>
+            <div class="pub-item">
+                A4. Rueda A, …, <strong>Wu Y</strong>, …, Bhat V. “<a href="https://arxiv.org/abs/2505.06151">Estimating Quality in Therapeutic Conversations: A Multi-Dimensional Natural Language Processing Framework</a>.” <strong>arXiv:2505.06151</strong>, v1. <span class="pub-status">独立预印本</span>
+            </div>
+            <div class="pub-item">
+                A5. Rueda A, …, <strong>Wu Y</strong>, …, Bhat V. “<a href="https://arxiv.org/abs/2505.01482">Understanding LLM Scientific Reasoning through Promptings and Model's Explanation on the Answers</a>.” <strong>arXiv:2505.01482</strong>, v2. <span class="pub-status">独立预印本</span>
+            </div>
+            <div class="pub-item">
+                A6. <strong>Wu Y</strong>, Wan G, Li J, Zhao S, Ma L, Ye T, Pop I, Zhang Y, Chen J. “<a href="https://arxiv.org/abs/2502.20689">WiseMind: a knowledge-guided multi-agent framework for accurate and empathetic psychiatric diagnosis</a>.” <strong>arXiv:2502.20689</strong>, v4. <span class="pub-status">早期题名 ProAI · 已正式发表</span>
+            </div>
+
+            <div class="pub-year-label">2024</div>
+            <div class="pub-item">
+                A7. Wan G, <strong>Wu Y</strong>, Chen J, Li S. “<a href="https://arxiv.org/abs/2408.17017">Reasoning Aware Self-Consistency: Leveraging Reasoning Paths for Efficient LLM Sampling</a>.” <strong>arXiv:2408.17017</strong>, v3. <span class="pub-status">早期题名 Dynamic Self-Consistency · 已正式发表</span>
+            </div>
+            <div class="pub-item">
+                A8. Wan G, <strong>Wu Y</strong>, Wang H, Zhao S, Chen J, Li S. “<a href="https://arxiv.org/abs/2408.13940">Derailer-Rerailer: Adaptive Verification for Efficient and Reliable Language Model Reasoning</a>.” <strong>arXiv:2408.13940</strong>, v4. <span class="pub-status">早期题名 CoT Rerailer · 已正式发表</span>
+            </div>
+            <div class="pub-item">
+                A9. Wan G, Lu Y, <strong>Wu Y</strong>, Hu M, Li S. “<a href="https://arxiv.org/abs/2402.11068">Large Language Models for Causal Discovery: Current Landscape and Future Directions</a>.” <strong>arXiv:2402.11068</strong>, v2. <span class="pub-status">早期题名 Bridging Causal Discovery… · 已正式发表</span>
             </div>
         </section>
 
         <!-- Honors & Awards -->
         <section>
-            <div class="section-title"><i class="fas fa-trophy"></i> 核心荣誉 (Honors & Awards)</div>
-            <div class="skills-grid" style="grid-template-cols: 80px 1fr;">
+            <div class="section-title"><i class="fas fa-trophy"></i> 核心荣誉 (Honors &amp; Awards)</div>
+             <div class="skills-grid" style="grid-template-columns: 80px 1fr;">
+                <div class="skills-label">2026</div>
+                <div>第九届复旦大学博士后创新创业大赛三等奖 / 2026“华罗庚杯”常州人工智能创新创业精英赛三等奖 / ·第十届祖冲之杯昆山创新创业大赛第二名</div>
+            </div>
+            <div class="skills-grid" style="grid-template-columns: 80px 1fr;">
                 <div class="skills-label">2025</div>
                 <div>上海市超级博士后 / 上海市引才计划 / 复旦大学超级博士后 / 全国高交会优秀成果奖</div>
             </div>
-            <div class="skills-grid" style="grid-template-cols: 80px 1fr;">
+            <div class="skills-grid" style="grid-template-columns: 80px 1fr;">
                 <div class="skills-label">2023-2024</div>
-                <div>IEEE 全球医疗创业大赛三等奖 (Global 3rd Place) / 全国高交会优秀成果奖 / 阿尔伯塔杰出博士生奖学金 / 国家公派留学奖学金 (CSC)</div>
+                <div>IEEE 全球医疗创业大赛三等奖 (Global 3rd Place) / 全国高交会优秀成果奖 / 阿尔伯塔杰出博士生奖学金 / 国家公派留学奖学金 (CSC) /
+                </div>
             </div>
-            <div class="skills-grid" style="grid-template-cols: 80px 1fr;">
+            <div class="skills-grid" style="grid-template-columns: 80px 1fr;">
                 <div class="skills-label">2017-2023</div>
                 <div> 连续 6 年院长荣誉名单</div>
             </div>
@@ -469,7 +608,7 @@
 
         <!-- Skills & Interests -->
         <section>
-            <div class="section-title"><i class="fas fa-tools"></i> 技能与个人特质 (Skills & Interests)</div>
+            <div class="section-title"><i class="fas fa-tools"></i> 技能与个人特质 (Skills &amp; Interests)</div>
             
             <div class="skills-grid">
                 <div class="skills-label">人工智能 (AI):</div>
@@ -489,7 +628,7 @@
             </div>
             <div class="skills-grid">
                 <div class="skills-label">特邀报告:</div>
-                <div>2026世界精神疾病与精神治疗大会 (土耳其), 2024 世界精神病学大会 (墨西哥), 2024 耶鲁大学 AI 论坛, 2024 信息技术研讨会 (曼谷)</div>
+                <div>2026中国“身心医学”大会， 2026世界精神疾病与精神治疗大会 (土耳其), 2024 世界精神病学大会 (墨西哥), 2024 耶鲁大学 AI 论坛, 2024 信息技术研讨会 (曼谷)</div>
             </div>
             <div class="skills-grid">
                 <div class="skills-label">个人特质:</div>
