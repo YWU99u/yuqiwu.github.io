@@ -27,7 +27,7 @@
         body {
             margin: 0;
             padding: 32px 18px;
-            font-family: "SimSun", "宋体", "Songti SC", "STSong", serif;
+            font-family: "Times New Roman", "SimSun", "宋体", "Songti SC", "STSong", serif;
             font-style: normal;
             background:
                 radial-gradient(circle at 15% 0%, rgba(173, 130, 56, 0.08), transparent 30%),
@@ -179,7 +179,7 @@
             margin: 0 0 17px 5px;
             padding-left: 16px;
             border-left: 2px solid #e2e8ef;
-            break-inside: avoid;
+            break-inside: auto;
         }
 
         .entry::before {
@@ -365,7 +365,7 @@
         }
 
         .no-print button {
-            font-family: "SimSun", "宋体", "Songti SC", "STSong", serif;
+            font-family: "Times New Roman", "SimSun", "宋体", "Songti SC", "STSong", serif;
             letter-spacing: 0.4px;
             box-shadow: 0 8px 20px rgba(16, 43, 78, 0.18);
             transition: transform 0.2s ease, background 0.2s ease;
@@ -418,8 +418,20 @@
             }
             .a4-page::before { display: none; }
             .no-print { display: none !important; }
-            .page-break { break-before: page; page-break-before: always; }
-            .section-title, .entry, .pub-item, .skills-grid { break-inside: avoid; }
+            .section-title {
+                break-after: avoid-page;
+                page-break-after: avoid;
+            }
+            .entry {
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+            .entry-header,
+            .pub-item,
+            .skills-grid {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
             a { color: inherit !important; text-decoration: none; }
             .header { padding-top: 0; }
         }
@@ -615,9 +627,6 @@
             </div>
         </section>
         
-        <!-- 强制换页 -->
-        <div class="page-break"></div>
-
         <!-- Complete Publications -->
         <section>
             <div class="section-title"><i class="fas fa-book"></i> 完整论文发表 (Complete Publications)</div>
